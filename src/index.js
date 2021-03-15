@@ -1,12 +1,28 @@
 
 exports.min = function min (array) {
-  return 0;
+  if (typeof array == 'undefined' || array.length === 0) {
+    return 0;
+  } 
+  
+  return Math.min(...array);
+  
 }
 
 exports.max = function max (array) {
-  return 0;
+  if (typeof array == 'undefined' || array.length === 0) {
+    return 0;
+  } 
+    
+  return Math.max(...array)
+
+  // return 0;
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  if (typeof array == 'undefined' || array.length === 0) {
+    return 0;
+  } 
+  
+  const sum = array.reduce((a,b) => a+b, 0);
+  return sum/array.length;
 }
